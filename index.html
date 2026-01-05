@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vento</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  
+      /* =============================
+         BOOK A TABLE VALIDATION
+      ============================== */
+      const reservationForm = document.querySelector("#book-a-table form");
+  
+      reservationForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // STOP default submission
+  
+        const inputs = reservationForm.querySelectorAll("input, textarea");
+        let allFilled = true;
+  
+        inputs.forEach(input => {
+          if (input.value.trim() === "") {
+            allFilled = false;
+          }
+        });
+  
+        if (allFilled) {
+          alert("Reservation has been successfully booked!");
+          reservationForm.reset();
+        } else {
+          alert("Please fill all the fields before booking your table.");
+        }
+      });
+  
+      /* =============================
+         CONTACT FORM VALIDATION
+      ============================== */
+      const contactForm = document.querySelector("#contact form");
+  
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+  
+        const inputs = contactForm.querySelectorAll("input, textarea");
+        let allFilled = true;
+  
+        inputs.forEach(input => {
+          if (input.value.trim() === "") {
+            allFilled = false;
+          }
+        });
+  
+        if (allFilled) {
+          alert("Thank you for contacting us!");
+          contactForm.reset();
+        } else {
+          alert("Please fill all the fields before sending the message.");
+        }
+      });
+  
+    });
+  </script>
+  
+  
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+    <!-- Logo -->
+    <a href="#" class="logo me-auto">
+        <span class="logo-text">VENTO</span>
+      </a>      
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar mx-auto">
+        <ul class="navbar-nav d-flex flex-row justify-content-center gap-5 mb-0">
+          <li class="nav-item"><a class="nav-link text-white" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        </ul>
+    </nav>   
+  </div>
+</header>
+
+<!-- ======= Hero Section ======= -->
+ <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center">
+      <h1 class="mb-3">Welcome to <span>Vento</span></h1>
+      <h2 class="mb-4">
+        "Indulge in Culinary Delights: Where Every Bite is a Passport to Flavors of Amore!"
+      </h2>
+        <div class="btns"> 
+            <div class="btns d-flex justify-content-center gap-4">
+                <a href="#menu" class="btn-outline-custom">Our Menu</a>
+                <a href="#book-a-table" class="btn-outline-custom">Book a Table</a>
+              </div>       
+        </div> 
+
+    </div>
+ </section>
+  
+ <!-- Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+  
+      <!-- Section Title -->
+      <div class="section-title text-center mb-5 bg-text-primary">
+       
+        <h1>About Us</h1>
+      </div>
+  
+      <!-- ===== Row 1 : About Restaurant ===== -->
+      <div class="row gy-4 align-items-stretch mb-5">
+  
+        <!-- Image -->
+        <div class="col-lg-7 position-relative about-img"
+          style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5');"
+          data-aos="fade-up" data-aos-delay="150">
+          <div class="call-us position-absolute">
+            <h2>About Restaurant</h2>
+          </div>
+        </div>
+  
+        <!-- Text -->
+        <div class="col-lg-5 d-flex align-items-center"
+          data-aos="fade-up" data-aos-delay="300"
+          style="background-color:#cda45e; color:white;">
+          <div class="content p-4">
+            <p style="font-size:18px;">
+              Welcome to Vento, where culinary artistry meets warm hospitality.
+              We craft unforgettable dining experiences using authentic flavors
+              and premium ingredients.
+            </p>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- ===== Row 2 : Our History ===== -->
+      <div class="row gy-4 align-items-stretch mb-5">
+  
+        <!-- Text -->
+        <div class="col-lg-5 d-flex align-items-center"data-aos="fade-up"data-aos-delay="300"style="background-color:#cda45e; color:white;">
+            <div class="content p-4">
+                <p style="font-size:18px;">Founded with a passion for excellence, Vento blends tradition
+      with innovation to deliver timeless flavors and memorable moments.</p>
+            </div>
+        </div>
+
+  
+        <!-- Image -->
+        <div class="col-lg-7 position-relative about-img"
+          style="background-image: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1');"
+          data-aos="fade-up" data-aos-delay="150">
+          <div class="call-us position-absolute">
+            <h2>Our History</h2>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- ===== Row 3 : Specific & Delicacies ===== -->
+      <div class="row gy-4 align-items-stretch">
+  
+        <div class="col-lg-4 position-relative about-img"
+          style="background-image: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe');"
+          data-aos="fade-up">
+          <div class="call-us position-absolute">
+            <h2>Specific</h2>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 d-flex align-items-end"
+          data-aos="fade-up"
+          style="background-color:#cda45e; color:white;">
+          <div class="content p-4">
+            <p style="font-size:18px;">
+              Our menu celebrates signature dishes crafted with love,
+              inspired by Italy’s rich culinary heritage.
+            </p>
+          </div>
+        </div>
+  
+        <div class="col-lg-4 position-relative about-img"
+          style="background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');"
+          data-aos="fade-up">
+          <div class="call-us position-absolute">
+            <h2>Delicacies</h2>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  <!-- ======= Menu Section ======= -->
+<section id="menu" class="menu">
+    <div class="container" data-aos="fade-up">
+  
+      <!-- Section Title -->
+      <div class="section-title text-center">
+        <h3>Menu</h3>
+        <p>Check our tasty <span>Menu</span></p>
+      </div>
+  
+      <!-- Tabs -->
+      <div class="container mt-5">
+        <ul class="nav nav-tabs custom-tabs flex-column flex-sm-row justify-content-center"
+            id="menuTabs" role="tablist">
+  
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#all">Show All</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#beverages">Beverages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#lunch">Lunch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#dinner">Dinner</a>
+          </li>
+  
+        </ul>
+      </div>
+  
+      <!-- Tab Content -->
+      <div class="tab-content mt-4">
+  
+        <!-- SHOW ALL -->
+        <div class="tab-pane fade show active" id="all">
+          <div class="row">
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Classic Lemonade</a><span>$3.50</span>
+              </div>
+              <div class="menu-ingredients">
+                Freshly squeezed lemons with a hint of sweetness.
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Grilled Chicken Sandwich</a><span>$11.50</span>
+              </div>
+              <div class="menu-ingredients">
+                Juicy grilled chicken breast with lettuce and mayo.
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Classic Caesar Salad</a><span>$8.95</span>
+              </div>
+              <div class="menu-ingredients">
+                Romaine lettuce, croutons, parmesan & Caesar dressing.
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Seafood Linguine</a><span>$20.50</span>
+              </div>
+              <div class="menu-ingredients">
+                Shrimp, scallops & clams in white wine garlic sauce.
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- BEVERAGES -->
+        <div class="tab-pane fade" id="beverages">
+          <div class="row">
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Iced Caramel Macchiato</a><span>$4.75</span>
+              </div>
+              <div class="menu-ingredients">
+                Chilled espresso with creamy milk & caramel.
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Sparkling Berry Fizz</a><span>$4.95</span>
+              </div>
+              <div class="menu-ingredients">
+                Mixed berries with mint & sparkling water.
+              </div>
+            </div>
+            <div>
+                <button type="submit">Book a Table</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- LUNCH -->
+        <div class="tab-pane fade" id="lunch">
+          <div class="row">
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Mediterranean Wrap</a><span>$10.25</span>
+              </div>
+              <div class="menu-ingredients">
+                Hummus, feta, olives, roasted peppers & greens.
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- DINNER -->
+        <div class="tab-pane fade" id="dinner">
+          <div class="row">
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Grilled Filet Mignon</a><span>$25.95</span>
+              </div>
+              <div class="menu-ingredients">
+                Tender filet with garlic mashed potatoes & asparagus.
+              </div>
+            </div>
+  
+            <div class="col-lg-6 menu-item">
+              <div class="menu-content">
+                <a href="#">Salmon with Dill Cream Sauce</a><span>$19.95</span>
+              </div>
+              <div class="menu-ingredients">
+                Grilled salmon with creamy dill sauce & wild rice.
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <!-- ======= Book A Table Section ======= -->
+<section id="book-a-table" class="book-a-table">
+    <div class="container" data-aos="fade-up">
+  
+      <!-- Section Title -->
+      <div class="section-title text-center">
+        <h3>Reservation</h3>
+        <p>Book a Table</p>
+      </div>
+  
+      <!-- Reservation Form -->
+      <form class="php-email-form" role="form">
+  
+        <div class="row">
+          <div class="col-lg-4 col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name"
+              placeholder="Name" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email"
+              placeholder="Email" data-rule="email"
+              data-msg="Please enter a valid email" required>
+            <div class="validate"></div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="phone" id="phone"
+              placeholder="Phone" data-rule="minlen:4"
+              data-msg="Please enter at least 4 chars" required>
+            <div class="validate"></div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="date" name="date" class="form-control" id="date"
+              data-rule="minlen:4" data-msg="Please enter a valid date" required>
+            <div class="validate"></div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="time" class="form-control" name="time" id="time" required>
+            <small class="form-text text-muted">
+              Please enter the time of your visit.
+            </small>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 form-group mt-3">
+            <input type="number" class="form-control" name="people" id="people"
+              placeholder="No. of people" data-rule="minlen:1"
+              data-msg="Please enter at least 1 person" required>
+            <div class="validate"></div>
+          </div>
+        </div>
+  
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5"
+            placeholder="Message"></textarea>
+          <div class="validate"></div>
+        </div> 
+        <div class="text-center mt-3">
+            <button type="submit">Book a Table</button>
+          </div>           
+      </form>
+    </div>
+  </section>
+  <!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery">
+    <div class="container" data-aos="fade-up">
+  
+      <!-- Section Title -->
+      <div class="section-title text-center">
+        <h3>Gallery</h3>
+        <p>Some photos from Our Restaurant</p>
+      </div>
+  
+      <!-- Tabs -->
+      <div class="container mt-5">
+        <ul class="nav nav-tabs custom-tabs justify-content-center" id="galleryTabs" role="tablist">
+  
+          <li class="nav-item">
+            <a class="nav-link active" id="food-tab"
+               data-bs-toggle="tab" href="#food"
+               role="tab" aria-controls="food" aria-selected="true">
+              Food
+            </a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" id="ambience-tab"
+               data-bs-toggle="tab" href="#ambience"
+               role="tab" aria-controls="ambience" aria-selected="false">
+              Ambience
+            </a>
+          </li>
+  
+        </ul>
+      </div>
+  
+      <!-- Tab Content -->
+      <div class="tab-content mt-4" id="galleryTabContent">
+  
+        <!-- Food Tab -->
+        <div class="tab-pane fade show active" id="food" role="tabpanel">
+            <div class="row g-4">
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+                     class="img-fluid rounded" alt="Food">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe"
+                     class="img-fluid rounded" alt="Food">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1"
+                     class="img-fluid rounded" alt="Food">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1604908177522-0507ad1d8b18"
+                     class="img-fluid rounded" alt="Food">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187"
+                     class="img-fluid rounded" alt="Dessert">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b"
+                     class="img-fluid rounded" alt="Dessert">
+              </div>
+          
+            </div>
+        </div>
+          
+        <!-- Ambience Tab -->
+        <div class="tab-pane fade" id="ambience" role="tabpanel">
+            <div class="row g-4">
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c"
+                     class="img-fluid rounded" alt="Interior">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1"
+                     class="img-fluid rounded" alt="Restaurant">
+              </div>
+          
+              <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+                     class="img-fluid rounded" alt="Dining">
+              </div>
+          
+            </div>
+          </div>
+          
+  
+    </div>
+   </div>
+  </section>
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+  
+      <!-- Section Title -->
+      <div class="section-title text-center">
+        <h3>Contact</h3>
+        <p>Contact Us</p>
+      </div>
+  
+      <!-- Google Map -->
+      <div data-aos="fade-up">
+        <iframe
+          style="border:0; width: 100%; height: 350px;"
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6641.6162694677!2d-117.99591!3d33.662133!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1692763637266!5m2!1sen!2sus"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+  
+      <!-- Contact Details + Form -->
+      <div class="row mt-5" data-aos="fade-up">
+  
+        <!-- Left Column -->
+        <div class="col-lg-4">
+          <div class="info">
+  
+            <div class="address">
+              <i class="bi bi-geo-alt-fill"></i>
+              <h4>Location:</h4>
+              <p>123 Main Street, Cityville, USA</p>
+            </div>
+  
+            <div class="open-hours">
+              <i class="bi bi-clock-fill"></i>
+              <h4>Open Hours:</h4>
+              <p>Monday - Sunday<br>9:00 AM - 11:00 PM</p>
+            </div>
+  
+            <div class="email">
+              <i class="bi bi-envelope-at-fill"></i>
+              <h4>Email:</h4>
+              <p>contact@vento.com</p>
+            </div>
+  
+            <div class="phone">
+              <i class="bi bi-telephone-inbound-fill"></i>
+              <h4>Phone:</h4>
+              <p>+1 234 567 890</p>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- Right Column -->
+        <div class="col-lg-8 mt-5 mt-lg-0">
+          <form class="php-email-form">
+  
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+              </div>
+  
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" placeholder="Your Email" required>
+              </div>
+            </div>
+  
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+  
+            <div class="form-group mt-3">
+              <textarea class="form-control" rows="8" placeholder="Message" required></textarea>
+            </div>
+  
+            <div class="text-center">
+              <button type="submit"
+                onclick="showAlert('Thank you for contacting us!')">
+                Send Message
+              </button>
+            </div>
+  
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+  <!-- End Contact Section -->
+ <!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+  
+          <!-- Left -->
+          <div class="col-lg-6 col-md-6">
+            <div class="footer-info">
+              <h2>Vento</h2>
+              <div class="social-links mt-3">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Right -->
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h5>Useful Links</h5>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
